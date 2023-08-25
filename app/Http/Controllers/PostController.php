@@ -18,9 +18,6 @@ class PostController extends Controller
         $post= Post::with('writer:id,username')->FindOrFail($id);
         return new PostDetailResource($post);
     }
-    public function show2($id){
-        $post= Post::FindOrFail($id);
-        return new PostDetailResource($post);
-    }
+    
 }
  
